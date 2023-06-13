@@ -1,5 +1,5 @@
 .list-wrap {
-  animation: next 6s ease-in-out infinite alternate;
+  animation: next 9s ease-in-out infinite alternate;
 }
 @keyframes next {
   50% {
