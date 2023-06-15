@@ -13,3 +13,26 @@
 .img-bg {
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
+
+.img-bg:hover {
+  animation: pulse2 800ms ease-in-out;
+}
+.gr {
+  width: 8px;
+  height: 200px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  background: linear-gradient(transparent, greenyellow, transparent);
+  content: "";
+}
+
+@keyframes pulse2 {
+  from,
+  to {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}

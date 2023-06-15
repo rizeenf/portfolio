@@ -15,7 +15,7 @@ const Intro = () => {
             <span className=" text-yellow-600 text-4xl"> Rizki Nurpadilah</span>
           </span>
           <div className="intro-list text-2xl flex flex-row items-center h-8 overflow-hidden ">
-            <span className="">Currently i'm learning </span>
+            <span className=" mr-3">Currently i'm learning </span>
             <div className="list-wrap h-full">
               <div className="list text-yellow-500">ReactJS</div>
               <div className="list text-yellow-500">Web Developer</div>
@@ -26,10 +26,10 @@ const Intro = () => {
       </div>
       <div className="right justify-center flex flex-1">
         <div className=" w-full relative ">
-          <div className="img-bg bg-yellow-500 h-full w-full absolute top-0 right-0 "></div>
+          <div className="img-bg bg-yellow-500 h-full w-full absolute top-0 right-8 "></div>
           <img
             src={Me2}
-            className=" w-full h-full object-cover absolute"
+            className=" h-full right-0 object-cover absolute overflow-hidden"
             alt=""
           />
         </div>
