@@ -5,6 +5,8 @@ import JS from "../assets/JS.png";
 import react from "../assets/react.png";
 import css from "../assets/css.png";
 import html from "../assets/html.png";
+import tailwind from "../assets/tailwind.png";
+import bootstrap from "../assets/bootstrap.png";
 
 const About = () => {
   return (
@@ -44,6 +46,16 @@ const About = () => {
             />
             <img
               src={react}
+              alt=""
+              className=" h-14 w-14 object-cover rounded-md"
+            />
+            <img
+              src={tailwind}
+              alt=""
+              className=" h-14 w-14 object-cover rounded-md"
+            />
+            <img
+              src={bootstrap}
               alt=""
               className=" h-14 w-14 object-cover rounded-md"
             />

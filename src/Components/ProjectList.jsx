@@ -5,8 +5,8 @@ const ProjectList = () => {
   return (
     <div className="">
       <div className="header">
-        <h1 className="text-4xl font-bold mt-10">Projects made</h1>
-        <p>For learning purposes i created some project, </p>
+        <h1 className="text-4xl font-bold mt-10">Projects</h1>
+        <p>Each project is a unique piece of development </p>
       </div>
       <Project />
       <Project />

@@ -30,9 +30,8 @@
 @keyframes pulse2 {
   from,
   to {
-    scale: 1;
   }
   50% {
-    scale: 1.05;
+    transform: translateX(-32px);
   }
 }
