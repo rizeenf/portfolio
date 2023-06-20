@@ -27,11 +27,13 @@ const Intro = () => {
       <div className="right justify-center flex flex-1">
         <div className=" w-full relative ">
           <div className="img-bg bg-yellow-500 h-full w-full absolute top-0 right-8 "></div>
-          <img
-            src={Me2}
-            className=" h-full right-0 object-cover absolute overflow-hidden"
-            alt=""
-          />
+          <div className="border-img ">
+            <img
+              src={Me2}
+              className=" w-96 object-cover absolute overflow-hidden z-10"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

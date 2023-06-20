@@ -3,23 +3,14 @@ import Project from "./Project";
 
 const ProjectList = () => {
   return (
-    <div className="">
-      <div className="header">
-        <h1 className="text-4xl font-bold mt-10">Projects</h1>
-        <p>Each project is a unique piece of development </p>
+    <div className=" h-screen ">
+      <div className="header flex justify-center items-center flex-col">
+        <h1 className="text-4xl font-bold mb-5">Projects</h1>
+        <p>Each project is a unique piece of my development </p>
       </div>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      <div className=" h-full flex justify-center items-center flex-wrap mt-5">
+        <Project />
+      </div>
     </div>
   );
 };
