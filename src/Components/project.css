@@ -7,10 +7,39 @@
   overflow: hidden;
   align-items: center;
   gap: 4px;
+  position: sticky;
+  z-index: 5;
 }
 .circle {
   background-color: white;
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  margin-left: 3px;
+}
+
+.project-img:hover {
+  animation: scrolling 4s ease-in-out infinite;
+  cursor: pointer;
+}
+@keyframes scrolling {
+  50% {
+    scale: 1.03;
+  }
+  100% {
+    transform: translateY(-60%);
+  }
+}
+
+.border-project:hover {
+  animation: zoom 4s ease-in-out;
+  cursor: pointer;
+}
+@keyframes zoom {
+  10% {
+    scale: 1.03;
+  }
+  100% {
+    scale: 1.05;
+  }
 }

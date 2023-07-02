@@ -8,9 +8,7 @@ const ProjectList = () => {
         <h1 className="text-4xl font-bold mb-5">Projects</h1>
         <p>Each project is a unique piece of my development </p>
       </div>
-      <div className=" h-full flex justify-center items-center flex-wrap mt-5">
-        <Project />
-      </div>
+      <Project />
     </div>
   );
 };
