@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import arrow from "../assets/arrow.svg";
 import emailjs from "@emailjs/browser";
+import MapChart from "./MapChart";
 
 const Contact = () => {
   const form = useRef();
@@ -79,7 +80,7 @@ const Contact = () => {
         </div>
         <div className="right flex-1 flex justify-center items-center w-full h-full bg-white rounded-3xl rounded-tr-none rounded-bl-none">
           <div className="about flex justify-center items-center h-full w-full flex-col gap-5 text-gray-600 ">
-            <div className="top flex  flex-col justify-center items-center h-2/3 w-full">
+            <div className="top flex  flex-col justify-center items-center  w-full">
               {/* <div className="top flex flex-col justify-center items-center h-1/2 w-full">
                 <img
                   src="https://cdn.cdnlogo.com/logos/g/93/gmail.svg"
@@ -95,7 +96,9 @@ const Contact = () => {
                 <span>Bekasi, Jawa Barat</span>
               </div> */}
             </div>
+            <MapChart />
             <div className="bottom flex flex-wrap justify-center items-center flex-col h-1/3 w-full gap-10 m-5">
+              <div className="map"></div>
               <span>About us</span>
               <span>Features</span>
               <span>Our blogs</span>
