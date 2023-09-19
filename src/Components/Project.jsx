@@ -24,17 +24,37 @@ const Project = () => {
       demo: "https://rize-socialmedia.vercel.app/",
       src: "https://github.com/rizeenf/socialmedia",
     },
+    {
+      id: 3,
+      link: "rize-shoprizing.vercel.app",
+      img: "https://i.ibb.co/Jptm4Kx/screencapture-rize-shoprizing-vercel-app-2023-09-19-21-51-41.png",
+      name: "Shop App",
+      desc: "Shopping application using Image API from Pixabay, it also using Redux for storing Cart",
+      framework: "React, Redux, Sass",
+      demo: "https://rize-shoprizing.vercel.app/",
+      src: "https://github.com/rizeenf/shoprizing",
+    },
+    {
+      id: 4,
+      link: "https://goatify-rize.vercel.app",
+      img: "https://i.ibb.co/XLkTTys/screencapture-goatify-rize-vercel-app-2023-09-19-21-56-00.png",
+      name: "Landing Page",
+      desc: "Landing page for store (in this case Goat), it show multiple products that can be ordered",
+      framework: "React, Tailwind",
+      demo: "https://https://goatify-rize.vercel.app/",
+      src: "https://github.com/rizeenf/goat-shop",
+    },
   ];
 
   return (
-    <div className="h-full flex flex-col gap-14 justify-center items-center">
+    <div className="h-full mb-5 flex flex-col gap-14 justify-center items-center">
       {projects.map((proj) => (
         <div
           key={proj.id}
           className={`${
             proj.id % 2 == 0
-              ? "flex flex-row justify-center w-1/2 h-1/3 gap-5"
-              : "flex flex-row-reverse justify-center w-1/2 h-1/3 gap-5"
+              ? "flex flex-row justify-center w-1/2 h-[300px] gap-5"
+              : "flex flex-row-reverse justify-center w-1/2 h-[300px] gap-5"
           }`}
         >
           <div className="card border-project rounded-md border overflow-hidden relative">
