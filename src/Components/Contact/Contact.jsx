@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import arrow from "../assets/arrow.svg";
+import arrow from "../../assets/arrow.svg";
 import emailjs from "@emailjs/browser";
-import MapChart from "./MapChart";
 
 const Contact = () => {
   const form = useRef();
@@ -32,72 +31,72 @@ const Contact = () => {
   };
 
   return (
-    <div className=" h-screen bg-yellow-500 text-white">
-      <div className="header flex justify-center items-center flex-col h-1/6">
-        <h1 className="text-5xl font-bold my-20">
+    <div className="h-screen text-white bg-yellow-500" id="contact">
+      <div className="flex flex-col items-center justify-center header h-1/6">
+        <h1 className="my-20 text-5xl font-bold">
           Let's discuss
-          <span className=" font-mono italic"> something cool </span>
+          <span className="font-mono italic "> something cool </span>
           together!
         </h1>
       </div>
-      <div className="main flex flex-row justify-center items-center h-5/6  ">
-        <div className="left flex justify-center items-center flex-col flex-1 h-full  ">
+      <div className="flex flex-row items-center justify-center main h-5/6 ">
+        <div className="flex flex-col items-center justify-center flex-1 h-full left ">
           <form
             ref={form}
             onSubmit={sendEmail}
             action=""
             name="formMsg"
-            className=" w-full flex justify-center items-center flex-col gap-5 "
+            className="flex flex-col items-center justify-center w-full gap-5 "
           >
-            <span className=" text-xl">
+            <span className="text-xl ">
               Your Message will sent using EmailJS
             </span>
             <input
               type="text"
               placeholder="Your name.."
               name="sender_name"
-              className=" bg-white rounded p-3  h-16 w-1/2 border-b-gray-400 border-b-2 text-gray-600"
+              className="w-1/2 h-16 p-3 text-gray-600 bg-white border-b-2 rounded border-b-gray-400"
             />
             <input
               type="email"
               placeholder="Email.."
               name="sender_email"
-              className=" bg-white rounded p-3  h-16 w-1/2 border-b-gray-400 border-b-2 text-gray-600"
+              className="w-1/2 h-16 p-3 text-gray-600 bg-white border-b-2 rounded border-b-gray-400"
             />
             <input
               type="text"
               placeholder="Message.."
               name="message"
-              className=" bg-white rounded p-3  w-1/2 h-52 border-b-gray-400 border-b-2 text-gray-600"
+              className="w-1/2 p-3 text-gray-600 bg-white border-b-2 rounded h-52 border-b-gray-400"
             />
             <input
               type="submit"
               value="Send me a Message"
               name="message"
-              className=" bg-yellow-100 p-3 w-1/3 text-gray-500 rounded cursor-pointer"
+              className="w-1/3 p-3 text-gray-500 bg-yellow-100 rounded cursor-pointer "
             />
           </form>
         </div>
-        <div className="right flex-1 flex justify-center items-center w-full h-full bg-white rounded-3xl rounded-tr-none rounded-bl-none">
-          <div className="about flex justify-center items-center h-full w-full flex-col gap-5 text-gray-600 ">
-            <div className="top flex  flex-col justify-center items-center  w-full">
-              {/* <div className="top flex flex-col justify-center items-center h-1/2 w-full">
+        <div className="flex items-center justify-center flex-1 w-full h-full bg-white rounded-tr-none rounded-bl-none right rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-full h-full gap-5 text-gray-600 about ">
+            <div className="flex flex-col items-center justify-center w-full top">
+              {/* <div className="flex flex-col items-center justify-center w-full top h-1/2">
                 <img
                   src="https://cdn.cdnlogo.com/logos/g/93/gmail.svg"
                   alt="Mail"
-                  className=" h-14 w-14 "
+                  className=" h-14 w-14"
                 />
                 <span>Email</span>
                 <span>rize.nf11@gmail.com</span>
               </div>
-              <div className="top flex  flex-col justify-center items-center h-1/2 w-full">git 
-                <img src={arrow} alt="" className=" font-bold w-14 h-14" />
+              <div className="flex flex-col items-center justify-center w-full top h-1/2">git 
+                <img src={arrow} alt="" className="font-bold w-14 h-14" />
                 <span>Location</span>
                 <span>Bekasi, Jawa Barat</span>
               </div> */}
             </div>
-            <MapChart />
-            <div className="bottom flex flex-wrap justify-center items-center flex-col h-1/3 w-full gap-10 m-5">
+            {/* <MapChart /> */}
+            <div className="flex flex-col flex-wrap items-center justify-center w-full gap-10 m-5 bottom h-1/3">
               <div className="map"></div>
               <span>About us</span>
               <span>Features</span>

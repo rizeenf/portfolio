@@ -1,0 +1,28 @@
+.list-wrap {
+  animation: next 9s ease-in-out infinite alternate;
+}
+@keyframes next {
+  50% {
+    transform: translateY(-32px);
+  }
+  100% {
+    transform: translateY(-64px);
+  }
+}
+
+.img-bg {
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 20% 100%, 0% 50%, 20% 0%);
+}
+
+.img-bg:hover {
+  animation: pulse2 800ms ease-in-out;
+}
+
+@keyframes pulse2 {
+  from,
+  to {
+  }
+  50% {
+    transform: translateX(-32px);
+  }
+}
