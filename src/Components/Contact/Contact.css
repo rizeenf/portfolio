@@ -1,0 +1,15 @@
+.slash {
+  clip-path: polygon(0 0, 77% 0, 100% 100%, 0 100%);
+}
+
+.slash2 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+@media screen and (max-width: 639px) {
+  .slash {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border-radius: 10px;
+    padding: 5px;
+  }
+}

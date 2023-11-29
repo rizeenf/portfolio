@@ -76,7 +76,10 @@ const skillLearning = [
 const About = () => {
   return (
     <>
-      <div className="flex h-screen transition-all ease-in-out a" id="about">
+      <div
+        className="flex h-screen transition-all ease-in-out a sm:flex-col"
+        id="about"
+      >
         <div className="flex-1 left">
           <div className="relative w-1/2 card h-1/2 ">
             <div className="absolute w-full h-full overflow-hidden bg-yellow-500 rounded-md card-bg top-1/2 left-1/2"></div>
@@ -88,7 +91,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center flex-1 gap-5 right">
-          <div className="flex flex-col items-center justify-center gap-5 header">
+          <div className="flex flex-col items-center justify-center gap-5 header ">
             <h1 className="text-4xl font-bold ">About me</h1>
             <p className="w-2/3 font-thin text-justify text-md ">
               I’m a web developer. I have been working with some technologies
@@ -102,12 +105,12 @@ const About = () => {
         </div>
       </div>
       <div
-        className="flex flex-col items-center justify-center my-32 header "
+        className="flex flex-col items-center justify-center my-32 header sm:p-10"
         id="skill"
       >
         <h1 className="my-5 text-4xl font-bold">Skills</h1>
         <h4 className="my-3 text-base text-gray-700 uppercase">Using Now : </h4>
-        <div className="flex flex-row flex-wrap items-center justify-around max-w-md gap-10 ">
+        <div className="flex flex-row flex-wrap items-center justify-around max-w-xl gap-14">
           {skill.map((item) => (
             <div
               className="flex flex-col items-center justify-between gap-2 item "
@@ -127,7 +130,7 @@ const About = () => {
         <h4 className="my-3 mt-10 text-base text-gray-700 uppercase">
           learning :
         </h4>
-        <div className="flex flex-row flex-wrap items-center justify-around max-w-md gap-10 ">
+        <div className="flex flex-row flex-wrap items-center justify-around max-w-xl gap-14 ">
           {skillLearning.map((item) => (
             <div
               className="flex flex-col items-center justify-between gap-2 item "

@@ -18,28 +18,15 @@
   margin-left: 3px;
 }
 
-.project-img:hover {
-  animation: scrolling 4s ease-in-out infinite;
-  cursor: pointer;
-}
-@keyframes scrolling {
-  50% {
-    scale: 1.03;
-  }
-  100% {
-    transform: translateY(-60%);
-  }
-}
-
 .border-project:hover {
-  animation: zoom 4s ease-in-out;
+  animation: zoom 1s ease-in-out;
   cursor: pointer;
 }
 @keyframes zoom {
-  10% {
-    scale: 1.03;
+  50% {
+    scale: 1.02;
   }
   100% {
-    scale: 1.05;
+    scale: 1;
   }
 }

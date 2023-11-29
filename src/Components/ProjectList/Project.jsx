@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./project.css";
+import { PopupContext } from "../../context/popupContext";
+import Popup from "./Popup";
 
 const Project = () => {
+  const { image, toggleImage } = useContext(PopupContext);
+
   // FAKE DATA
   const projects = [
     {
@@ -41,68 +45,74 @@ const Project = () => {
       name: "Landing Page",
       desc: "Landing page for store (in this case Goat), it show multiple products that can be ordered",
       framework: "React, Tailwind",
-      demo: "https://https://goatify-rize.vercel.app/",
+      demo: "https://goatify-rize.vercel.app/",
       src: "https://github.com/rizeenf/goat-shop",
     },
   ];
 
   return (
-    <div className="h-full mb-5 flex flex-col gap-14 justify-center items-center">
-      {projects.map((proj) => (
-        <div
-          key={proj.id}
-          className={`${
-            proj.id % 2 == 0
-              ? "flex flex-row justify-center w-1/2 h-[300px] gap-5"
-              : "flex flex-row-reverse justify-center w-1/2 h-[300px] gap-5"
-          }`}
-        >
-          <div className="card border-project rounded-md border overflow-hidden relative">
-            <div className="head">
-              <div className="circle"></div>
-              <div className="circle"></div>
-              <div className="circle"></div>
+    <>
+      <div className="flex flex-col items-center justify-center h-full mb-5 gap-14 ">
+        {projects.map((proj) => (
+          <div
+            key={proj.id}
+            className={`${
+              proj.id % 2 == 0
+                ? "flex flex-row justify-center  w-full max-w-4xl gap-5 sm:flex-col-reverse"
+                : "flex flex-row-reverse justify-center   w-full max-w-4xl gap-5 sm:flex-col-reverse"
+            }`}
+          >
+            <div className="flex-[5] border rounded-md card border-project">
+              <div className="head">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+              <img
+                src={proj.img}
+                alt={proj.link}
+                className="object-cover object-left-top project-img aspect-video"
+                onClick={() => toggleImage(proj.img)}
+              />
             </div>
-            <img
-              src={proj.img}
-              alt={proj.link}
-              className="object-cover project-img "
-            />
-          </div>
-          <div className="detail overflow-hidden relative w-2/5 h-full ">
-            <div className="name flex flex-col justify-center items-center gap-5 text-justify">
-              <span className=" text-2xl font-semibold mt-1">{proj.name} </span>
-              <span className=" text-sm">{proj.desc} </span>
-              <span className=" text-lg font-bold rounded-md underline ">
-                {proj.framework}
-              </span>
-              <div className="link flex flex-row gap-3 w-full">
-                <div className="github bg-yellow-500 hover:bg-yellow-600 cursor-pointer text-white p-2 rounded-md w-1/2 ">
-                  <a href={proj.src} target="_blank" className=" text-sm">
-                    <img
-                      src="https://cdn.cdnlogo.com/logos/g/69/github-icon.svg"
-                      className=" w-6 h-6 rounded-full"
-                      alt="Github"
-                    />
-                    Source code
-                  </a>
-                </div>
-                <div className="vercel bg-yellow-500 hover:bg-yellow-600 cursor-pointer text-white p-2 rounded-md w-1/2">
-                  <a href={proj.demo} target="_blank" className=" text-sm">
-                    <img
-                      src="https://cdn.cdnlogo.com/logos/v/78/vercel.svg"
-                      className=" w-6 h-6 rounded-full object-cover overflow-hidden"
-                      alt="Vercel"
-                    />
-                    Live demo
-                  </a>
+            <div className="flex-[2] h-full detail ">
+              <div className="flex flex-col items-center justify-center gap-5 text-justify name">
+                <span className="mt-1 text-2xl font-semibold ">
+                  {proj.name}
+                </span>
+                <span className="text-sm">{proj.desc} </span>
+                <span className="text-lg font-bold underline rounded-md ">
+                  {proj.framework}
+                </span>
+                <div className="flex flex-row w-full gap-3 link">
+                  <div className="w-1/2 p-2 text-white bg-yellow-500 rounded-md cursor-pointer github hover:bg-yellow-600 ">
+                    <a href={proj.src} target="_blank" className="text-sm ">
+                      <img
+                        src="https://cdn.cdnlogo.com/logos/g/69/github-icon.svg"
+                        className="w-6 h-6 rounded-full "
+                        alt="Github"
+                      />
+                      Source code
+                    </a>
+                  </div>
+                  <div className="w-1/2 p-2 text-white bg-yellow-500 rounded-md cursor-pointer vercel hover:bg-yellow-600">
+                    <a href={proj.demo} target="_blank" className="text-sm ">
+                      <img
+                        src="https://cdn.cdnlogo.com/logos/v/78/vercel.svg"
+                        className="object-cover w-6 h-6 overflow-hidden rounded-full "
+                        alt="Vercel"
+                      />
+                      Live demo
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <div className="showProject ">{image ? <Popup /> : ""}</div>
+    </>
   );
 };
 
