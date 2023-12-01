@@ -5,6 +5,7 @@ import Contact from "./Components/Contact/Contact";
 import Intro from "./Components/Intro/Intro";
 import Navbar from "./Components/Navbar/Navbar";
 import PopupProvider from "./context/popupContext";
+import { useEffect } from "react";
 
 function App() {
   return (

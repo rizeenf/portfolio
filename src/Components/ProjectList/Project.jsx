@@ -10,16 +10,6 @@ const Project = () => {
   const projects = [
     {
       id: 1,
-      link: "rize-gallery.vercel.app",
-      img: "https://i.ibb.co/CV7k8zm/screencapture-rize-gallery-vercel-app-2023-06-20-22-02-58.png",
-      name: "Gallerysplash",
-      desc: "Simple gallery website using API from Pixabay, you can search some random stuff here and it'll automatically refresh the page.",
-      framework: "React, Tailwind",
-      demo: "https://rize-gallery.vercel.app/",
-      src: "https://github.com/rizeenf/gallery-ReactTailwind",
-    },
-    {
-      id: 2,
       link: "rize-socialmedia.vercel.app",
       img: "https://i.ibb.co/qn6WHt5/screencapture-rize-socialmedia-vercel-app-profile-1001-2023-06-20-22-02-14.png",
       name: "Socialmedia",
@@ -29,7 +19,7 @@ const Project = () => {
       src: "https://github.com/rizeenf/socialmedia",
     },
     {
-      id: 3,
+      id: 2,
       link: "rize-shoprizing.vercel.app",
       img: "https://i.ibb.co/Jptm4Kx/screencapture-rize-shoprizing-vercel-app-2023-09-19-21-51-41.png",
       name: "Shop App",
@@ -39,14 +29,14 @@ const Project = () => {
       src: "https://github.com/rizeenf/shoprizing",
     },
     {
-      id: 4,
-      link: "https://goatify-rize.vercel.app",
-      img: "https://i.ibb.co/XLkTTys/screencapture-goatify-rize-vercel-app-2023-09-19-21-56-00.png",
-      name: "Landing Page",
-      desc: "Landing page for store (in this case Goat), it show multiple products that can be ordered",
-      framework: "React, Tailwind",
-      demo: "https://goatify-rize.vercel.app/",
-      src: "https://github.com/rizeenf/goat-shop",
+      id: 3,
+      link: "https://zashboard.vercel.app",
+      img: "https://i.ibb.co/MZb4rXD/screencapture-zashboard-vercel-app-2023-12-01-13-11-24.png",
+      name: "Admin Dashboard",
+      desc: "Dashboard provides charts for every data collected, using Charts from recharts and Data Table from MaterialUI",
+      framework: "React, Sass, MaterialUI, Recharts",
+      demo: "https://zashboard.vercel.app",
+      src: "https://github.com/rizeenf/admindashboard",
     },
   ];
 
