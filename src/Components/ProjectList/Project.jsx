@@ -10,8 +10,18 @@ const Project = () => {
   const projects = [
     {
       id: 1,
+      link: "rize-chatreact-firebase.vercel.app/",
+      img: "/projChatApp.png",
+      name: "Chat Apps",
+      desc: "Chat application build using React for UI and Firebase for handling Auth and Storage (Firestore)",
+      framework: "React, Tailwind, Firebase",
+      demo: "https://rize-chatreact-firebase.vercel.app/",
+      src: "https://github.com/rizeenf/chat-react-firebase",
+    },
+    {
+      id: 4,
       link: "rize-socialmedia.vercel.app",
-      img: "https://i.ibb.co/qn6WHt5/screencapture-rize-socialmedia-vercel-app-profile-1001-2023-06-20-22-02-14.png",
+      img: "/projSocialmed.png",
       name: "Socialmedia",
       desc: "Mini social media that you can upload, post, like, comment, and share such as usual social media",
       framework: "React, Tailwind",
@@ -21,7 +31,7 @@ const Project = () => {
     {
       id: 2,
       link: "rize-shoprizing.vercel.app",
-      img: "https://i.ibb.co/Jptm4Kx/screencapture-rize-shoprizing-vercel-app-2023-09-19-21-51-41.png",
+      img: "/projShoprizing.png",
       name: "Shop App",
       desc: "Shopping application using Image API from Pixabay, it also using Redux for storing Cart",
       framework: "React, Redux, Sass",
@@ -31,7 +41,7 @@ const Project = () => {
     {
       id: 3,
       link: "https://zashboard.vercel.app",
-      img: "https://i.ibb.co/MZb4rXD/screencapture-zashboard-vercel-app-2023-12-01-13-11-24.png",
+      img: "/projZashboard.png",
       name: "Admin Dashboard",
       desc: "Dashboard provides charts for every data collected, using Charts from recharts and Data Table from MaterialUI",
       framework: "React, Sass, MaterialUI, Recharts",
@@ -52,7 +62,7 @@ const Project = () => {
                 : "flex flex-row-reverse justify-center   w-full max-w-4xl gap-5 sm:flex-col-reverse"
             }`}
           >
-            <div className="flex-[5] border rounded-md card border-project">
+            <div className="flex-[5] border rounded-md card border-project aspect-video object-cover overflow-hidden">
               <div className="head">
                 <div className="circle"></div>
                 <div className="circle"></div>
@@ -61,7 +71,7 @@ const Project = () => {
               <img
                 src={proj.img}
                 alt={proj.link}
-                className="object-cover object-left-top project-img aspect-video"
+                className="object-cover project-img w-full "
                 onClick={() => toggleImage(proj.img)}
               />
             </div>

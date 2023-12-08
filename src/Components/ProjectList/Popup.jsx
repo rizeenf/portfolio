@@ -11,7 +11,7 @@ const Popup = () => {
           <img
             src={image}
             alt="images"
-            className=" object-left-top object-cover w-[99dvw] h-[99dvh] rounded"
+            className=" object-left-top object-cover w-[99dvw] max-h-[99dvh] rounded"
           />
           <button
             className="absolute w-6 h-6 text-white bg-red-600 rounded-sm hover:bg-red-200 top-2 right-3"
