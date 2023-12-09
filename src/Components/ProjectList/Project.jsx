@@ -19,7 +19,7 @@ const Project = () => {
       src: "https://github.com/rizeenf/chat-react-firebase",
     },
     {
-      id: 4,
+      id: 2,
       link: "rize-socialmedia.vercel.app",
       img: "/projSocialmed.png",
       name: "Socialmedia",
@@ -29,7 +29,7 @@ const Project = () => {
       src: "https://github.com/rizeenf/socialmedia",
     },
     {
-      id: 2,
+      id: 3,
       link: "rize-shoprizing.vercel.app",
       img: "/projShoprizing.png",
       name: "Shop App",
@@ -39,7 +39,7 @@ const Project = () => {
       src: "https://github.com/rizeenf/shoprizing",
     },
     {
-      id: 3,
+      id: 4,
       link: "https://zashboard.vercel.app",
       img: "/projZashboard.png",
       name: "Admin Dashboard",
@@ -71,7 +71,7 @@ const Project = () => {
               <img
                 src={proj.img}
                 alt={proj.link}
-                className="object-cover project-img w-full "
+                className="object-cover w-full project-img "
                 onClick={() => toggleImage(proj.img)}
               />
             </div>
