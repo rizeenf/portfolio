@@ -7,7 +7,7 @@ const Intro = () => {
     <div className="flex h-[100svh] snap-center" id="home">
       <div className="flex items-center justify-center flex-[2] left">
         <div className="flex flex-col text-4xl font-bold name">
-          <span>Hello. </span>
+          <span>Hello </span>
           <span className="text-lg ">How's life?</span>
           <span>
             My Name is
