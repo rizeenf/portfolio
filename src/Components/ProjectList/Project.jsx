@@ -52,17 +52,17 @@ const Project = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-full mb-5 gap-14 ">
+      <div className="flex flex-col items-center justify-center h-full mb-5 snap-start gap-14 ">
         {projects.map((proj) => (
           <div
             key={proj.id}
             className={`${
               proj.id % 2 == 0
-                ? "flex flex-row justify-center  w-full max-w-4xl gap-5 sm:flex-col-reverse"
-                : "flex flex-row-reverse justify-center   w-full max-w-4xl gap-5 sm:flex-col-reverse"
+                ? "flex flex-row items-center justify-center snap-start h-[93svh]  w-full max-w-4xl gap-5 sm:flex-col-reverse"
+                : "flex flex-row-reverse items-center justify-center snap-start h-[93svh]  w-full max-w-4xl gap-5 sm:flex-col-reverse"
             }`}
           >
-            <div className="flex-[5] border rounded-md card border-project aspect-video object-cover overflow-hidden">
+            <div className="flex-[5] border rounded-md card border-project aspect-video max-h-[24rem] object-cover overflow-hidden">
               <div className="head">
                 <div className="circle"></div>
                 <div className="circle"></div>
@@ -75,7 +75,7 @@ const Project = () => {
                 onClick={() => toggleImage(proj.img)}
               />
             </div>
-            <div className="flex-[2] h-full detail ">
+            <div className="flex-[2] max-h-[24rem] detail ">
               <div className="flex flex-col items-center justify-center gap-5 text-justify name">
                 <span className="mt-1 text-2xl font-semibold ">
                   {proj.name}

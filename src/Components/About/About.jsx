@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import Me3 from "/me3.jpg";
 
 const skill = [
   {
@@ -77,14 +76,14 @@ const About = () => {
   return (
     <>
       <div
-        className="flex h-screen transition-all ease-in-out a sm:flex-col"
+        className="flex h-[93svh] transition-all ease-in-out a sm:flex-col snap-center"
         id="about"
       >
         <div className="flex-1 left">
           <div className="relative w-1/2 card h-1/2 ">
             <div className="absolute w-full h-full overflow-hidden bg-yellow-500 rounded-md card-bg top-1/2 left-1/2"></div>
             <img
-              src={Me3}
+              src="/me3.jpg"
               alt=""
               className="absolute object-cover w-full h-full rounded-md img top-1/3 left-1/3"
             />
@@ -105,7 +104,7 @@ const About = () => {
         </div>
       </div>
       <div
-        className="flex flex-col items-center justify-center my-32 header sm:p-10"
+        className="flex flex-col items-center justify-center my-32 header sm:p-10 h-[93svh] snap-center"
         id="skill"
       >
         <h1 className="my-5 text-4xl font-bold">Skills</h1>

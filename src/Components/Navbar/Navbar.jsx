@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "/logoipsum-248.svg";
 import "./Navbar.css";
+import ListMenu from "../ListMenu";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const navbarList = document.querySelectorAll(".navbar");
+  const [isOpened, setIsOpened] = useState(false);
 
+  const handleOpened = () => {
+    setIsOpened((prev) => !prev);
+  };
   useEffect(() => {
     navbarList.forEach((item) => {
       item.classList.remove("active");
@@ -19,9 +24,9 @@ const Navbar = () => {
   }, [isActive]);
 
   return (
-    <div className="sticky top-0 z-50 flex flex-row items-center justify-between w-full px-5 py-3 transition-all ease-linear bg-white rounded shadow-sm">
+    <div className="sticky top-0 z-50 flex flex-row items-center justify-between w-full px-5 h-[7svh] transition-all ease-linear bg-white rounded shadow-sm snap-start">
       <div className="left">
-        <a href="">
+        <a href="#home">
           <img src={logo} alt="" className="w-10" />
         </a>
       </div>
@@ -61,6 +66,8 @@ const Navbar = () => {
             Contact me
           </a>
         </ul>
+
+        <ListMenu isOpened={isOpened} handleOpened={handleOpened} />
       </div>
     </div>
   );

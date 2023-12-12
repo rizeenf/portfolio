@@ -66,9 +66,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="h-screen " id="contact">
+    <div className="h-[87svh] snap-center" id="contact">
       <div className="flex flex-col items-center justify-center header ">
-        <h1 className="my-20 text-5xl font-bold">
+        <h1 className="text-5xl font-bold ">
           Let's discuss
           <span className="font-mono italic text-yellow-500 ">
             {" "}

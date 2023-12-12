@@ -7,9 +7,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import PopupProvider from "./context/popupContext";
 
 function App() {
-
   return (
-    <div className="transition-all ease-in-out">
+    <div className="h-screen overflow-auto transition-all ease-in-out snap-y snap-mandatory !scroll-smooth">
       <PopupProvider>
         <Navbar />
         <Intro />

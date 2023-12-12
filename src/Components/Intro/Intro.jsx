@@ -4,19 +4,19 @@ import Me2 from "/me2n.png";
 
 const Intro = () => {
   return (
-    <div className="flex h-[100dvh] ">
+    <div className="flex h-[100svh] snap-center" id="home">
       <div className="flex items-center justify-center flex-[2] left">
         <div className="flex flex-col text-4xl font-bold name">
           <span>Hello. </span>
-          <span className="text-2xl ">How's life?</span>
+          <span className="text-lg ">How's life?</span>
           <span>
             My Name is
             <span className="text-4xl text-yellow-600 "> Rizki Nurpadilah</span>
           </span>
           <div className="flex flex-row items-center h-8 overflow-hidden text-2xl intro-list sm:h-16 ">
-            <span className="mr-3 ">Currently i'm learning </span>
+            <span className="mr-3 ">I'm </span>
             <div className="h-full list-wrap">
-              <div className="text-yellow-500 list">ReactJS</div>
+              <div className="text-yellow-500 list">ReactJS Developer</div>
               <div className="text-yellow-500 list">Web Developer</div>
               <div className="text-yellow-500 list">Front-End Developer</div>
             </div>
